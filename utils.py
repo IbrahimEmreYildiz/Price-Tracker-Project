@@ -10,16 +10,11 @@ def timer(func):
         afternow = time.time()
         sonuc = afternow - now
         print(f' {func.__name__} fonksiyonu {sonuc: .4f} saniye sürdü')
-
-
         return result
     return wrapper
 
-
 def apply_operation(data, operation):
     return [operation(item) for item in data]
-
-
 
 def create_price_filter(min_price):
     def price_check(product):
